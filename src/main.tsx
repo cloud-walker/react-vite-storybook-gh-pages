@@ -25,7 +25,15 @@ createRoot(document.getElementById("root")!).render(
         >
           <Route index element={<div>home</div>} />
           <Route path="about" element={<div>about</div>} />
-          <Route path="stories" element={<div>stories</div>} />
+          <Route
+            path="stories"
+            element={
+              <iframe
+                src="/storybook-static/index.html"
+                className={styles.iframe}
+              />
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
